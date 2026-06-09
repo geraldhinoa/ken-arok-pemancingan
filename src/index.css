@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1F4D3A;
+  --color-secondary: #0F4C75;
+  --color-accent: #F5F7FA;
+  --color-navy: #0D2137;
+  --color-navy-light: #132D46;
+  --color-green: #00875A;
+  --color-green-light: #00A86B;
+  --font-sans: "Poppins", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FFFFFF;
+    color: #1f2937;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Outfit", sans-serif;
+  }
+}

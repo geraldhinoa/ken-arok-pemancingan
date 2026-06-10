@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const facilities = [
   {
@@ -70,6 +70,13 @@ const facilities = [
 ];
 
 const Facilities = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleTap = (i) => {
+    // Toggle: tap same card → deactivate, tap different card → activate that one
+    setActiveIndex((prev) => (prev === i ? null : i));
+  };
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
@@ -87,22 +94,38 @@ const Facilities = () => {
 
         {/* CARDS GRID */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5">
-          {facilities.map(({ svg, label, sublabel }, i) => (
-            <div
-              key={label}
-              data-aos="fade-up"
-              data-aos-delay={i * 80}
-              className="group flex flex-col items-center gap-4 rounded-2xl border border-gray-100 bg-[#F9FAFB] px-4 py-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-100 hover:border-emerald-200 cursor-default"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0D2137]/5 text-[#0D2137] group-hover:bg-[#00875A] group-hover:text-white transition-all duration-300">
-                {svg}
+          {facilities.map(({ svg, label, sublabel }, i) => {
+            const isActive = activeIndex === i;
+            return (
+              <div
+                key={label}
+                data-aos="fade-up"
+                data-aos-delay={i * 80}
+                onClick={() => handleTap(i)}
+                className={`group flex flex-col items-center gap-4 rounded-2xl border px-4 py-8 transition-all duration-300 cursor-pointer select-none
+                  ${
+                    isActive
+                      ? "-translate-y-2 shadow-lg shadow-emerald-100 border-emerald-200 bg-white"
+                      : "border-gray-100 bg-[#F9FAFB] hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-100 hover:border-emerald-200"
+                  }`}
+              >
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300
+                    ${
+                      isActive
+                        ? "bg-[#00875A] text-white"
+                        : "bg-[#0D2137]/5 text-[#0D2137] group-hover:bg-[#00875A] group-hover:text-white"
+                    }`}
+                >
+                  {svg}
+                </div>
+                <div className="text-center">
+                  <h3 className="text-sm font-bold text-[#0D2137] leading-snug">{label}</h3>
+                  <p className="mt-0.5 text-xs text-gray-400 font-medium">{sublabel}</p>
+                </div>
               </div>
-              <div className="text-center">
-                <h3 className="text-sm font-bold text-[#0D2137] leading-snug">{label}</h3>
-                <p className="mt-0.5 text-xs text-gray-400 font-medium">{sublabel}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

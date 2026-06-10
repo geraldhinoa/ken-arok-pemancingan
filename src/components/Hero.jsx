@@ -44,10 +44,10 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="mb-6 flex flex-col gap-1 md:gap-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-            <span className="text-white font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-sm">
+            <span className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-sm leading-tight">
               KOLAM PEMANCINGAN
             </span>
-            <span className="font-extrabold text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 drop-shadow-md pb-2">
+            <span className="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 drop-shadow-md pb-2 leading-tight">
               KEN AROK
             </span>
           </h1>

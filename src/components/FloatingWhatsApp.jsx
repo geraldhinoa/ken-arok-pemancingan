@@ -7,19 +7,21 @@ export default function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
 
-  // Muncul otomatis hanya ketika di-scroll ke bagian paling bawah (Footer)
+  // Muncul otomatis hanya saat user sudah scroll ke 80% dari panjang halaman
   useEffect(() => {
     const handleScroll = () => {
-      // Menghitung apakah user sudah scroll sampai dekat footer (kurang lebih 600px dari bawah)
-      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 600;
-      
-      if (isAtBottom && !hasOpened) {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = total > 0 ? scrolled / total : 0;
+
+      // Muncul kalau sudah scroll 80% ke bawah halaman
+      if (scrollPercent >= 0.8 && !hasOpened) {
         setIsOpen(true);
-        setHasOpened(true); 
+        setHasOpened(true);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasOpened]);
 

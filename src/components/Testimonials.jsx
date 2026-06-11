@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: "Pak Moden",
     role: "Juara Galatama",
-    text: "Sistem penilaian juaranya adil dan transparan. Karena ikannya tidak boleh dibawa pulang, kualitas tarikannya selalu terjaga dari awal sesi sampai akhir. Joss!",
+    text: "Sistem penilaian juaranya adil dan transparan. Anak kolamnya sangat jujur jadi bisa dipercaya oleh pemancing, karena dicek dulu oleh anak kolam terus ditunjukkan ke tetangga kanan kirinya. Joss!",
   },
 ];
 

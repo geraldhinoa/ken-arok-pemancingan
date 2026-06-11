@@ -66,9 +66,10 @@ export default function Navbar() {
           href="https://wa.me/6281292929210?text=Halo%20Admin%20Ken%20Arok%2C%20saya%20mau%20daftar%20lomba"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300
-                     text-cyan-300 border border-cyan-400/60 bg-white/5 backdrop-blur-md
-                     hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] hover:-translate-y-0.5"
+          className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-300
+                     bg-[#00875A]/70 backdrop-blur-md border border-white/20
+                     shadow-[0_4px_15px_rgba(0,135,90,0.2)]
+                     hover:bg-[#00875A]/90 hover:shadow-[0_6px_20px_rgba(0,135,90,0.4)] hover:-translate-y-0.5"
         >
           Daftar Lomba
         </a>
@@ -123,9 +124,10 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
-                  className="inline-flex items-center justify-center w-full px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300
-                             text-cyan-300 border border-cyan-400/60 bg-white/5 backdrop-blur-md
-                             hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] active:scale-[0.98]"
+                  className="inline-flex items-center justify-center w-full px-5 py-3 rounded-full text-sm font-semibold text-white transition-all duration-300
+                             bg-[#00875A]/70 backdrop-blur-md border border-white/20
+                             shadow-[0_4px_15px_rgba(0,135,90,0.2)]
+                             hover:bg-[#00875A]/90 active:scale-[0.98]"
                 >
                   Daftar Lomba
                 </a>

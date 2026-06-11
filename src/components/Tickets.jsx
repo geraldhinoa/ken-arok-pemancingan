@@ -103,8 +103,9 @@ export default function Tickets() {
                   rel="noopener noreferrer"
                   className="flex w-full items-center justify-center rounded-xl font-bold text-sm py-3.5 transition-all duration-300
                              bg-white/40 backdrop-blur-md border border-[#00875A]/30
-                             text-[#00875A] hover:text-white
-                             hover:bg-[#00875A] hover:shadow-[0_0_20px_rgba(0,135,90,0.4)]
+                             text-[#00875A] hover:text-white active:text-white
+                             hover:bg-[#00875A] active:bg-[#00875A] 
+                             hover:shadow-[0_0_20px_rgba(0,135,90,0.4)] active:shadow-[0_0_20px_rgba(0,135,90,0.4)]
                              shadow-[0_4px_10px_rgba(0,0,0,0.05)]"
                 >
                   Daftar Sekarang

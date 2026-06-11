@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Amer / Pemburu Janda",
     role: "Pemancing Profesional",
-    text: "Kolamnya bersih banget, air jernih dan suasana adem. Tarikan lelenya luar biasa berat, sekali kena langsung bikin deg-degan. Pokoknya beda levelnya sama kolam lain.",
+    text: "Tempatnya bersih banget dan suasananya adem. Tarikan lelenya luar biasa berat, sekali kena langsung bikin deg-degan. Pokoknya beda levelnya sama kolam lain.",
   },
   {
     name: "Bang Jek",

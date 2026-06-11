@@ -27,6 +27,26 @@ function FishIcon({ className = "" }) {
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Custom scroll handler agar perpindahan halaman lebih mulus dan akurat
+  const handleScrollTo = (e, href) => {
+    e.preventDefault();
+    setMobileOpen(false); // Tutup menu mobile jika terbuka
+
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    
+    if (elem) {
+      // Sedikit delay agar menu mobile sempat tertutup sebelum scroll berjalan
+      setTimeout(() => {
+        const offsetTop = elem.offsetTop - 68; // 68px = tinggi navbar
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      }, 50);
+    }
+  };
+
   return (
     <nav
       className="fixed top-0 left-0 w-full z-50"
@@ -53,6 +73,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
+                onClick={(e) => handleScrollTo(e, link.href)}
                 className="relative text-sm text-gray-200 font-medium hover:text-white transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#00875A] after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
@@ -111,8 +132,9 @@ export default function Navbar() {
                 >
                   <a
                     href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2 text-gray-300 hover:text-white transition-colors text-sm font-medium"
+                    onClick={(e) => handleScrollTo(e, link.href)}
+                    className="relative inline-block py-2 text-gray-300 hover:text-white transition-colors text-sm font-medium
+                               after:absolute after:left-0 after:bottom-1 after:h-[2px] after:w-0 after:bg-[#00875A] after:transition-all after:duration-300 hover:after:w-full active:after:w-full"
                   >
                     {link.label}
                   </a>

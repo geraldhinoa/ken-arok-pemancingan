@@ -86,7 +86,7 @@ const Footer = () => {
       <div className="border-t border-gray-700">
         <div className="max-w-6xl mx-auto px-4 py-4 text-center">
           <p className="text-xs text-gray-500">
-            &copy; 2025 Kolam Pemancingan Ken Arok. All rights reserved.
+            &copy; {new Date().getFullYear()} Kolam Pemancingan Ken Arok. All rights reserved.
           </p>
         </div>
       </div>

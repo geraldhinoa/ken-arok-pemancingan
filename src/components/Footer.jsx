@@ -4,6 +4,7 @@ import {
   FaPhoneAlt,
   FaWhatsapp,
   FaTiktok,
+  FaUser
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -66,12 +67,12 @@ const Footer = () => {
 
           <ul className="space-y-4">
             <li className="flex items-center gap-3 text-gray-400 text-sm">
-              <FaPhoneAlt className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)] flex-shrink-0" />
+              <FaWhatsapp className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)] text-lg flex-shrink-0" />
               <a href="https://wa.me/6281292929210" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+62 812-9292-9210</a>
             </li>
             <li className="flex items-center gap-3 text-gray-400 text-sm">
-              <FaWhatsapp className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)] text-lg flex-shrink-0" />
-              <a href="https://wa.me/6281292929210" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kolam Pemancingan Ken Arok</a>
+              <FaUser className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)] flex-shrink-0" />
+              <span>Kolam Pemancingan Ken Arok</span>
             </li>
             <li className="flex items-center gap-3 text-gray-400 text-sm">
               <FaTiktok className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)] text-lg flex-shrink-0" />

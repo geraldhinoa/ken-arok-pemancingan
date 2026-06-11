@@ -67,9 +67,9 @@ export default function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-300
-                     bg-[#00875A]/70 backdrop-blur-md border border-white/20
-                     shadow-[0_4px_15px_rgba(0,135,90,0.2)]
-                     hover:bg-[#00875A]/90 hover:shadow-[0_6px_20px_rgba(0,135,90,0.4)] hover:-translate-y-0.5"
+                     bg-gradient-to-r from-[#00875A]/80 to-[#00875A]/50 backdrop-blur-md border border-white/30
+                     shadow-[0_4px_15px_rgba(0,135,90,0.4)]
+                     hover:from-[#00875A]/90 hover:to-[#00875A]/70 hover:shadow-[0_6px_25px_rgba(0,135,90,0.6)] hover:-translate-y-0.5"
         >
           Daftar Lomba
         </a>
@@ -125,9 +125,9 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="inline-flex items-center justify-center w-full px-5 py-3 rounded-full text-sm font-semibold text-white transition-all duration-300
-                             bg-[#00875A]/70 backdrop-blur-md border border-white/20
-                             shadow-[0_4px_15px_rgba(0,135,90,0.2)]
-                             hover:bg-[#00875A]/90 active:scale-[0.98]"
+                             bg-gradient-to-r from-[#00875A]/80 to-[#00875A]/50 backdrop-blur-md border border-white/30
+                             shadow-[0_4px_20px_rgba(0,135,90,0.5)]
+                             active:scale-[0.98]"
                 >
                   Daftar Lomba
                 </a>
